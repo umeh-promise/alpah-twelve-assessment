@@ -31,7 +31,7 @@ export default function Footer() {
 
   return (
     <footer className="grid border-t border-primary-700 sm:hidden">
-      <ul className="flex items-center gap-2 justify-center">
+      <ul className="flex items-center justify-center gap-2">
         {sidebarMenuItems.map((link) => (
           <li key={link.id}>
             <Link

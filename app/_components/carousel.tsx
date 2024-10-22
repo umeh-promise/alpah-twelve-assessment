@@ -1,20 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { cn } from "@/utils";
 import { ChevronIcon } from "@/assets/icons";
 
-interface ImageCarouselProps {
+interface CarouselProps {
   images: string[];
+  autoScrollInterval?: number; // Time in milliseconds between slides
+  pauseOnHover?: boolean;
 }
 
-export default function Carousel({ images }: ImageCarouselProps) {
+export default function Carousel({
+  images,
+  autoScrollInterval = 5000, // Default to 5 seconds
+  pauseOnHover = true,
+}: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentIndex((prevIndex) =>
       prevIndex === images.length - 1 ? 0 : prevIndex + 1,
     );
-  };
+  }, [images.length]);
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
@@ -22,9 +29,23 @@ export default function Carousel({ images }: ImageCarouselProps) {
     );
   };
 
+  useEffect(() => {
+    if (isPaused) return;
+
+    const interval = setInterval(() => {
+      nextSlide();
+    }, autoScrollInterval);
+
+    return () => clearInterval(interval);
+  }, [isPaused, autoScrollInterval, nextSlide]);
+
   return (
     <article className="flex h-[32rem] w-full flex-col items-start gap-2 overflow-hidden md:gap-4">
-      <figure className="relative size-full overflow-hidden rounded-md border border-grey-400">
+      <figure
+        className="relative size-full overflow-hidden rounded-md border border-grey-400"
+        onMouseEnter={() => pauseOnHover && setIsPaused(true)}
+        onMouseLeave={() => pauseOnHover && setIsPaused(false)}
+      >
         {images.map((src, index) => (
           <div
             key={index}
@@ -76,14 +97,20 @@ export default function Carousel({ images }: ImageCarouselProps) {
         </figcaption>
 
         <button
-          onClick={prevSlide}
+          onClick={() => {
+            prevSlide();
+            pauseOnHover && setIsPaused(true);
+          }}
           className="md:size-12.5 absolute left-6 top-1/2 grid size-11 -translate-y-1/2 place-content-center rounded-full bg-white text-black hover:bg-opacity-80"
         >
           <ChevronIcon variation="left" />
         </button>
 
         <button
-          onClick={nextSlide}
+          onClick={() => {
+            nextSlide();
+            pauseOnHover && setIsPaused(true);
+          }}
           className="md:size-12.5 absolute right-6 top-1/2 grid size-11 -translate-y-1/2 place-content-center rounded-full bg-white text-black hover:bg-opacity-80"
         >
           <ChevronIcon variation="right" />

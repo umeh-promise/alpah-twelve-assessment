@@ -29,7 +29,7 @@ export default function Table({
 }: TableHeadersProps) {
   return (
     <section className="-mx-2 grid size-full items-start gap-2 pb-9 xs:mx-0">
-      <table className="w-full text-left text-sm md:px-10 rtl:text-right bg-sidebar">
+      <table className="w-full bg-sidebar text-left text-sm md:px-10 rtl:text-right">
         <thead className="text-table bg-primary-500 py-3 text-sm capitalize text-grey-300 md:py-6">
           <tr className="[&>*:not(:first-child):not(:last-child)]:hidden sm:[&>*:not(:first-child):not(:last-child)]:table-cell">
             {tableHeaders.map((header) => (
