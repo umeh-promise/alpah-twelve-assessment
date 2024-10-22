@@ -72,7 +72,7 @@ export default function EventTable({
             className={cn(
               "[&>*:not(:first-child):not(:last-child)]:hidden sm:[&>*:not(:first-child):not(:last-child)]:table-cell [&>td]:px-3 [&>td]:py-2 sm:[&>td]:px-6 sm:[&>td]:py-5",
               {
-                "border border-primary-100 bg-grey-400 sm:border-none sm:bg-transparent":
+                "border border-primary-100 bg-grey-800 sm:border-none sm:bg-transparent":
                   selectedEvent === event.id,
               },
             )}
