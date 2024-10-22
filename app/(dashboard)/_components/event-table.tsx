@@ -109,9 +109,9 @@ export default function EventTable({
             <td className="shrink-0 text-nowrap">
               <span
                 className={cn(
-                  "flex w-fit shrink-0 items-center gap-2 rounded-full bg-blue-300 px-3 py-0.5 text-white sm:bg-blue-50 sm:px-2 sm:py-1 sm:text-blue-300 capitalize border border-border-blue",
+                  "flex w-fit shrink-0 items-center gap-2 rounded-full border border-border-blue bg-blue-300 px-3 py-0.5 capitalize text-white sm:bg-blue-50 sm:px-2 sm:py-1 sm:text-blue-300",
                   {
-                    "bg-green-100 border border-border-green text-white sm:bg-green-50 sm:text-green-100":
+                    "border border-border-green bg-green-100 text-white sm:bg-green-50 sm:text-green-100":
                       event.status === "completed",
                   },
                 )}
