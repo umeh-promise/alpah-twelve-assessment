@@ -43,23 +43,23 @@ export default function Sidebar({
   setIsSidebarOpen,
 }: SidebarProps) {
   const pathname = usePathname();
-   const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
       setDarkMode(true);
-      document.documentElement.classList.add('dark');
+      document.documentElement.classList.add("dark");
     }
   }, []);
 
   const toggleTheme = () => {
     if (darkMode) {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
     } else {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
     }
     setDarkMode(!darkMode);
   };
@@ -84,7 +84,7 @@ export default function Sidebar({
     >
       <nav
         className={cn(
-          "h-full flex-col gap-6 overflow-y-auto border border-sidebar-border  bg-sidebar p-2 py-4 xs:w-[24rem] xl:flex xl:w-full",
+          "h-full flex-col gap-6 overflow-y-auto border border-sidebar-border bg-sidebar p-2 py-4 xs:w-[24rem] xl:flex xl:w-full",
         )}
       >
         <div
@@ -167,23 +167,25 @@ export default function Sidebar({
               )}
             </button>
           </li>
-           <li className="w-full">
-      <label
-        className={cn(
-          'inline-flex w-full shrink-0 cursor-pointer items-center gap-2 px-2 pb-1.5 pt-3 text-sm text-grey-300 transition-colors duration-300 hover:bg-primary-100 hover:text-primary-200',
-          { 'justify-center': isCollapsed }
-        )}
-      >
-        <input
-          type="checkbox"
-          className="peer sr-only"
-          checked={darkMode}
-          onChange={toggleTheme}
-        />
-        <span className="peer relative h-6 w-9 rounded-full bg-grey-600 after:absolute after:start-[1px] after:top-[1.8px] after:size-4 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-purple-200 peer-checked:after:translate-x-[80%] peer-checked:after:border-white peer-focus:outline-none rtl:peer-checked:after:-translate-x-full" />
-        {!isCollapsed && <span>{darkMode ? 'Light mode' : 'Dark mode'}</span>}
-      </label>
-    </li>
+          <li className="w-full">
+            <label
+              className={cn(
+                "inline-flex w-full shrink-0 cursor-pointer items-center gap-2 px-2 pb-1.5 pt-3 text-sm text-grey-300 transition-colors duration-300 hover:bg-primary-100 hover:text-primary-200",
+                { "justify-center": isCollapsed },
+              )}
+            >
+              <input
+                type="checkbox"
+                className="peer sr-only"
+                checked={darkMode}
+                onChange={toggleTheme}
+              />
+              <span className="peer relative h-6 w-9 rounded-full bg-grey-600 after:absolute after:start-[1px] after:top-[1.8px] after:size-4 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-purple-200 peer-checked:after:translate-x-[80%] peer-checked:after:border-white peer-focus:outline-none rtl:peer-checked:after:-translate-x-full" />
+              {!isCollapsed && (
+                <span>{darkMode ? "Light mode" : "Dark mode"}</span>
+              )}
+            </label>
+          </li>
           <li className="w-full">
             <button
               className={cn(
