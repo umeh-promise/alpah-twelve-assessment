@@ -13,7 +13,7 @@ export default function DashboardOverviewCard({
   const percentageValue = percentage < 1 ? "down" : "up";
 
   return (
-    <article className="rounded-[2px] border border-grey-400 p-6">
+    <article className="rounded-[2px] border border-grey-400 p-6 bg-sidebar">
       <h4 className="flex items-center gap-1 font-semibold text-grey-200">
         {title}
         <InfoIcon />

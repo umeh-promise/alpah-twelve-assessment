@@ -29,7 +29,7 @@ export default function Table({
 }: TableHeadersProps) {
   return (
     <section className="-mx-2 grid size-full items-start gap-2 pb-9 xs:mx-0">
-      <table className="w-full text-left text-sm md:px-10 rtl:text-right">
+      <table className="w-full text-left text-sm md:px-10 rtl:text-right bg-sidebar">
         <thead className="text-table bg-primary-500 py-3 text-sm capitalize text-grey-300 md:py-6">
           <tr className="[&>*:not(:first-child):not(:last-child)]:hidden sm:[&>*:not(:first-child):not(:last-child)]:table-cell">
             {tableHeaders.map((header) => (
@@ -59,7 +59,7 @@ export default function Table({
         <div className="flex items-center gap-2">
           <label className="hidden md:inline-block">Show:</label>
           <select
-            className="flex w-[11rem] cursor-pointer items-center gap-2 rounded-md border border-grey-400 bg-transparent px-2 py-2 text-grey-300 outline-grey-100 [&>*]:bg-grey-400"
+            className="flex w-[11rem] cursor-pointer items-center gap-2 rounded-md border border-grey-400 bg-sidebar px-2 py-2 text-grey-300 outline-grey-100 [&>*]:bg-grey-400"
             value={itemsPerPage}
             onChange={handleItemsPerPageChange}
           >

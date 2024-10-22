@@ -15,13 +15,13 @@ export default function EventFilters() {
           <input
             type="search"
             placeholder="Search..."
-            className="w-full bg-transparent outline-none"
+            className="w-full bg-sidebar outline-none"
           />
         </span>
 
         {filterVariants.map((filter) => (
           <select
-            className="flex w-full cursor-pointer items-center gap-2 rounded-md border border-grey-400 bg-transparent px-2 py-2 text-grey-300 outline-grey-100 md:w-[11rem] [&>*]:bg-transparent"
+            className="flex w-full cursor-pointer items-center gap-2 rounded-md border border-grey-400 bg-sidebar px-2 py-2 text-grey-300 outline-grey-100 md:w-[11rem] [&>*]:bg-grey-400"
             key={filter.id}
           >
             <option value="10">{filter.name}</option>
@@ -35,7 +35,7 @@ export default function EventFilters() {
 
       <div className="grid grid-cols-2 items-center gap-2 self-end sm:flex lg:justify-self-end">
         <label>Sort:</label>
-        <select className="flex w-[14rem] cursor-pointer items-center gap-2 self-end justify-self-end rounded-md border border-grey-400 bg-transparent px-2 py-2 text-grey-300 outline-grey-100 [&>*]:bg-transparent">
+        <select className="flex w-[14rem] cursor-pointer items-center gap-2 self-end justify-self-end rounded-md border border-grey-400 bg-sidebar px-2 py-2 text-grey-300 outline-grey-100 [&>*]:bg-grey-400">
           <option value="most-recent">Most Recent</option>
         </select>
 

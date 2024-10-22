@@ -18,8 +18,7 @@ export default function OverviewChart({
     <ResponsiveContainer
       width="100%"
       height="100%"
-      // aspect={1000 / 500}
-      className="rounded-md border border-grey-400"
+      className="rounded-md border border-grey-400 bg-sidebar"
     >
       <BarChart
         width={300}
