@@ -4,6 +4,7 @@ import { ReactNode, useState } from "react";
 import Sidebar from "./_components/sidebar";
 import { cn } from "@/utils";
 import { BarIcon, Logo } from "@/assets/icons";
+import Footer from "./_components/footer";
 
 export default function DashboardLayout({ children }: { children: ReactNode }) {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -34,8 +35,9 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
         isSidebarOpen={isSidebarOpen}
         setIsSidebarOpen={setIsSidebarOpen}
       />
-      <section className="h-screen overflow-y-auto px-8 py-17 xl:pr-24">
+      <section className="h-[95vh] overflow-y-auto px-8 py-17 xl:pr-24">
         {children}
+        <Footer />
       </section>
     </section>
   );

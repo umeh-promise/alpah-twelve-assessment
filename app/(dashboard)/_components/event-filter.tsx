@@ -1,8 +1,4 @@
-import {
-  DotsVerticalIcon,
-  DownloadIcon,
-  SearchIcon,
-} from "@/assets/icons";
+import { DotsVerticalIcon, DownloadIcon, SearchIcon } from "@/assets/icons";
 
 const filterVariants = [
   { id: 1, name: "Date" },

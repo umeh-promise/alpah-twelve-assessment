@@ -1,4 +1,3 @@
-
 import EventFilters from "./event-filter";
 import EventTable from "./event-table";
 
