@@ -50,7 +50,7 @@ export default function EventDetailsModal({
         role="group "
         className="flex flex-col items-center gap-3 md:flex-row md:justify-between"
       >
-        <button className="w-full rounded-[2px] border border-[#334155] text-[#334155] bg-white px-6 py-2  md:w-auto">
+        <button className="w-full rounded-[2px] border border-[#334155] bg-white px-6 py-2 text-[#334155] md:w-auto">
           Edit
         </button>
 
@@ -58,10 +58,10 @@ export default function EventDetailsModal({
           role="group"
           className="flex w-full flex-col items-center gap-2 md:w-auto md:flex-row"
         >
-          <button className="w-full justify-start rounded-[2px] border-transparent border bg-red-100 px-6 py-2 text-white md:w-auto">
+          <button className="w-full justify-start rounded-[2px] border border-transparent bg-red-100 px-6 py-2 text-white md:w-auto">
             Delete
           </button>
-          <button className="w-full justify-start rounded-[2px] border-transparent border bg-primary-200 px-6 py-2 text-white md:w-auto">
+          <button className="w-full justify-start rounded-[2px] border border-transparent bg-primary-200 px-6 py-2 text-white md:w-auto">
             Mark as Completed
           </button>
         </div>
