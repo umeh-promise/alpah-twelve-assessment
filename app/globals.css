@@ -35,10 +35,9 @@
   --blue-100: #93c5fd;
   --blue-200: #2563eb;
   --blue-300: #3b82f6;
-  
 
-  --border-blue:transparent;
-  --border-green:transparent;
+  --border-blue: transparent;
+  --border-green: transparent;
 }
 
 .dark {
@@ -52,8 +51,8 @@
   --grey-900: #fff;
   --grey-400: #484554;
   --primary-500: #6a6676;
-  --border-blue:var(--blue-300);
-  --border-green:var(--green-100);
+  --border-blue: var(--blue-300);
+  --border-green: var(--green-100);
   --green-50: transparent;
   --blue-50: transparent;
 }
