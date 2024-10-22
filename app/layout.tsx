@@ -9,7 +9,7 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-   title: {
+  title: {
     template: "%s | Event Management Dashboard",
     default: "Home",
   },
