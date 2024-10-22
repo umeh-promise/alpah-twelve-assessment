@@ -96,6 +96,7 @@ export default function EventTable({
                 )}
               </button>
               <button
+              className="text-left"
                 onClick={() => {
                   setIsDetailsModalOpen(true);
                   handleToggleEvent(event.id);
