@@ -1,5 +1,4 @@
 import {
-  ChevronIcon,
   DotsVerticalIcon,
   DownloadIcon,
   SearchIcon,

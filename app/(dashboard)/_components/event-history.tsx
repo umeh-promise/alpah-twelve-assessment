@@ -1,4 +1,5 @@
-import EventFilters from "@/app/_components/event-filter";
+
+import EventFilters from "./event-filter";
 import EventTable from "./event-table";
 
 const tableHeadings = [
