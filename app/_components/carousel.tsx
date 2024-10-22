@@ -24,7 +24,7 @@ export default function Carousel({ images }: ImageCarouselProps) {
 
   return (
     <article className="flex h-[32rem] w-full flex-col items-start gap-2 overflow-hidden md:gap-4">
-      <figure className="border-grey-400 relative size-full overflow-hidden rounded-md border">
+      <figure className="relative size-full overflow-hidden rounded-md border border-grey-400">
         {images.map((src, index) => (
           <div
             key={index}
