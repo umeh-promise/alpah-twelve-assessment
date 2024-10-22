@@ -59,7 +59,7 @@ export default function Table({
         <div className="flex items-center gap-2">
           <label className="hidden md:inline-block">Show:</label>
           <select
-            className="flex w-[11rem] cursor-pointer items-center gap-2 rounded-md border border-grey-400 px-2 py-2 text-grey-300 outline-grey-100 bg-transparent [&>*]:bg-grey-400"
+            className="flex w-[11rem] cursor-pointer items-center gap-2 rounded-md border border-grey-400 bg-transparent px-2 py-2 text-grey-300 outline-grey-100 [&>*]:bg-grey-400"
             value={itemsPerPage}
             onChange={handleItemsPerPageChange}
           >
