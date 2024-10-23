@@ -47,8 +47,10 @@ export default function Sidebar({
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark" || (
-    window.matchMedia('(prefers-color-scheme: dark)').matches) ) {
+    if (
+      savedTheme === "dark" ||
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
       setDarkMode(true);
       document.documentElement.classList.add("dark");
     }

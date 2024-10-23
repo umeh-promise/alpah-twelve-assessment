@@ -99,7 +99,7 @@ export default function Carousel({
         <button
           onClick={() => {
             prevSlide();
-            pauseOnHover && setIsPaused(true);
+            if (pauseOnHover) setIsPaused(true);
           }}
           className="md:size-12.5 absolute left-6 top-1/2 grid size-11 -translate-y-1/2 place-content-center rounded-full bg-white text-black hover:bg-opacity-80"
         >
@@ -109,7 +109,7 @@ export default function Carousel({
         <button
           onClick={() => {
             nextSlide();
-            pauseOnHover && setIsPaused(true);
+            if (pauseOnHover) setIsPaused(true);
           }}
           className="md:size-12.5 absolute right-6 top-1/2 grid size-11 -translate-y-1/2 place-content-center rounded-full bg-white text-black hover:bg-opacity-80"
         >
